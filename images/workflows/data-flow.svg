@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .bg{fill:#08111d}
+      .panel{fill:#101a2b;stroke:#24324f;stroke-width:2}
+      .title{fill:#f1f6ff;font-family:Inter,Arial,sans-serif;font-size:34px;font-weight:700}
+      .text{fill:#d6e4fb;font-family:Inter,Arial,sans-serif;font-size:20px}
+      .small{fill:#93a9c8;font-family:Inter,Arial,sans-serif;font-size:16px}
+      .box{fill:#162338;stroke:#5e82b8;stroke-width:2}
+      .box2{fill:#1a2d22;stroke:#55b57d;stroke-width:2}
+      .box3{fill:#2b2035;stroke:#b46de6;stroke-width:2}
+      .arrow{stroke:#89b8ff;stroke-width:5;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#89b8ff"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1400" height="900"/>
+  <rect class="panel" x="50" y="40" rx="24" ry="24" width="1300" height="820"/>
+  <text class="title" x="90" y="105">TechStore AI - Workflow dï liÇu & mô hình</text>
+  <text class="small" x="90" y="145">NguÓn dï liÇu, vector search và recommender</text>
+
+  <rect class="box" x="100" y="240" rx="18" ry="18" width="240" height="110"/>
+  <text class="text" x="140" y="282">products.json</text>
+  <text class="small" x="140" y="314">650k+ dòng dï liÇu</text>
+
+  <rect class="box2" x="100" y="390" rx="18" ry="18" width="240" height="110"/>
+  <text class="text" x="140" y="432">orders / users</text>
+  <text class="small" x="140" y="464">LËch sí mua hàng</text>
+
+  <rect class="box3" x="430" y="280" rx="18" ry="18" width="280" height="120"/>
+  <text class="text" x="470" y="325">ProductManager</text>
+  <text class="small" x="470" y="357">Chu©n hóa, lÍc, thÑng kê</text>
+
+  <rect class="box" x="800" y="200" rx="18" ry="18" width="260" height="120"/>
+  <text class="text" x="840" y="245">VectorSearchEngine</text>
+  <text class="small" x="840" y="277">product_vectors.json</text>
+
+  <rect class="box2" x="800" y="370" rx="18" ry="18" width="260" height="120"/>
+  <text class="text" x="840" y="415">AI Recommender</text>
+  <text class="small" x="840" y="447">TFIDF, CF, SVD, cluster</text>
+
+  <rect class="box" x="1110" y="275" rx="18" ry="18" width="190" height="140"/>
+  <text class="text" x="1145" y="320">API output</text>
+  <text class="small" x="1145" y="350">recommend</text>
+  <text class="small" x="1145" y="375">chat</text>
+
+  <path class="arrow" d="M340 295 L430 335"/>
+  <path class="arrow" d="M340 445 L430 350"/>
+  <path class="arrow" d="M710 335 L800 260"/>
+  <path class="arrow" d="M710 335 L800 430"/>
+  <path class="arrow" d="M1060 260 L1110 330"/>
+  <path class="arrow" d="M1060 430 L1110 350"/>
+
+  <text class="small" x="90" y="620">Quy t¯c ch¡y</text>
+  <rect class="panel" x="90" y="650" rx="16" ry="16" width="1220" height="140"/>
+  <text class="text" x="120" y="705">1. Load dï liÇu të JSON / DB</text>
+  <text class="text" x="470" y="705">2. Tính toán vector / model</text>
+  <text class="text" x="830" y="705">3. Tr£ k¿t qu£ có trace</text>
+</svg>

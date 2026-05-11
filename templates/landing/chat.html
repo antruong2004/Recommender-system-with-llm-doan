@@ -1,0 +1,14 @@
+<!-- AI CHAT WIDGET -->
+<section id="chat-widget" class="products-section" style="background: var(--surface); border-radius: 24px; margin: 40px auto; width: calc(100vw - 40px); max-width: none;">
+  <h2 class="section-title" style="text-align: center;">🤖 Chat với AI tư vấn ngay</h2>
+  <p class="section-subtitle" style="text-align: center;">Hỏi bất cứ điều gì về sản phẩm. AI sẽ tư vấn dựa trên dữ liệu thực tế và nhu cầu của bạn.</p>
+  <div style="background: rgba(255,255,255,.02); border: 1px solid rgba(124,58,237,.2); border-radius: 20px; padding: 32px; position: relative;">
+    <div id="ai-chat-messages" style="height: 420px; overflow-y: auto; margin-bottom: 20px; padding: 20px; background: rgba(0,0,0,.1); border-radius: 16px;"></div>
+    <div style="display: flex; gap: 12px;">
+      <input type="text" id="ai-chat-input" placeholder="Hỏi AI: 'Laptop nào tốt cho lập trình?'" style="flex: 1; padding: 16px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.2); border-radius: 16px; color: var(--text); font-size: 16px;">
+      <button onclick="sendAIChat()" class="btn-primary" style="padding: 16px 24px; white-space: nowrap;">
+        <i class="fas fa-paper-plane"></i> Gửi
+      </button>
+    </div>
+  </div>
+</section>

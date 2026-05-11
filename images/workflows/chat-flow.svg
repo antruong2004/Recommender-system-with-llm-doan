@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .bg{fill:#081019}
+      .panel{fill:#101b2c;stroke:#24344e;stroke-width:2}
+      .title{fill:#f0f6ff;font-family:Inter,Arial,sans-serif;font-size:34px;font-weight:700}
+      .text{fill:#d6e4fb;font-family:Inter,Arial,sans-serif;font-size:20px}
+      .small{fill:#95a9c7;font-family:Inter,Arial,sans-serif;font-size:16px}
+      .box{fill:#16243a;stroke:#5880bc;stroke-width:2}
+      .box2{fill:#1a2e23;stroke:#59b87f;stroke-width:2}
+      .box3{fill:#2d2037;stroke:#b46ce6;stroke-width:2}
+      .arrow{stroke:#89b8ff;stroke-width:5;fill:none;marker-end:url(#m)}
+      .arrow2{stroke:#76d79a;stroke-width:5;fill:none;marker-end:url(#m2)}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#89b8ff"/></marker>
+    <marker id="m2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#76d79a"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="900"/>
+  <rect class="panel" x="50" y="40" rx="24" ry="24" width="1300" height="820"/>
+  <text class="title" x="90" y="105">TechStore AI - Workflow chat/trending</text>
+  <text class="small" x="90" y="145">LuÓng xí lý truy v¥n hÙi tho¡i trong `/api/chat`</text>
+
+  <rect class="box" x="90" y="250" rx="18" ry="18" width="220" height="110"/>
+  <text class="text" x="130" y="292">User message</text>
+  <text class="small" x="130" y="324">Ng°Ýi dùng gíi câu hÏi</text>
+
+  <rect class="box" x="380" y="250" rx="18" ry="18" width="240" height="110"/>
+  <text class="text" x="420" y="290">Normalize / detect</text>
+  <text class="small" x="420" y="322">Të khóa trending, intent</text>
+
+  <rect class="box2" x="680" y="180" rx="18" ry="18" width="250" height="110"/>
+  <text class="text" x="720" y="220">Trending path</text>
+  <text class="small" x="720" y="252">Top s£n ph©m theo dï liÇu</text>
+
+  <rect class="box3" x="680" y="350" rx="18" ry="18" width="250" height="110"/>
+  <text class="text" x="720" y="390">Advisor chat</text>
+  <text class="small" x="720" y="422">LLM + retrieval</text>
+
+  <rect class="box" x="990" y="260" rx="18" ry="18" width="250" height="120"/>
+  <text class="text" x="1030" y="300">Response</text>
+  <text class="small" x="1030" y="332">response, trace, source</text>
+
+  <path class="arrow" d="M310 305 L380 305"/>
+  <path class="arrow2" d="M620 305 L680 235"/>
+  <path class="arrow" d="M620 305 L680 405"/>
+  <path class="arrow2" d="M930 235 L990 300"/>
+  <path class="arrow" d="M930 405 L990 320"/>
+
+  <rect class="panel" x="90" y="560" rx="16" ry="16" width="1200" height="200"/>
+  <text class="text" x="120" y="615">Các nhánh chính</text>
+  <text class="small" x="120" y="655">" Trending / top s£n ph©m</text>
+  <text class="small" x="420" y="655">" HÏi t° v¥n s£n ph©m</text>
+  <text class="small" x="760" y="655">" Fallback sang LLM</text>
+  <text class="small" x="120" y="690">" L°u lËch sí chat vào DB n¿u b­t</text>
+  <text class="small" x="420" y="690">" Tr£ vÁ debug trace cho kiÃm tra</text>
+</svg>

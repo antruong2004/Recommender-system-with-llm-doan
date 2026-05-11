@@ -1,0 +1,42 @@
+<!-- HERO SECTION -->
+<section class="landing-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-main">
+      <div>
+        <h1>Mua sắm thông minh<br><span style="background: linear-gradient(135deg, var(--accent), var(--purple)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">với AI tư vấn</span></h1>
+        <p class="hero-lead">NexMart AI hiểu bạn hơn bất kỳ ai. Tư vấn cá nhân hóa 24/7, gợi ý sản phẩm hoàn hảo dựa trên nhu cầu thực sự của bạn.</p>
+        <div class="hero-cta">
+          <button class="cta-chat" onclick="document.getElementById('chat-widget').scrollIntoView({behavior:'smooth'})">
+            <i class="fas fa-robot"></i> Tư vấn AI miễn phí
+          </button>
+          <a href="/dashboard" class="btn-ghost" style="align-self: center;">Mở Dashboard</a>
+          <a href="#products" style="align-self: center; color: var(--text-bright); font-size: 16px; font-weight: 500;">Xem sản phẩm nổi bật</a>
+        </div>
+      </div>
+      <div class="ai-demo">
+        <h4><i class="fas fa-robot"></i> Thử AI ngay</h4>
+        <input type="text" class="ai-demo-input" id="demo-input" placeholder="VD: 'Điện thoại dưới 10tr cho sinh viên'" onkeypress="if(event.key==='Enter') demoAI()">
+        <button class="ai-demo-btn" onclick="demoAI()">Gửi <i class="fas fa-paper-plane"></i></button>
+        <div id="demo-response" style="margin-top: 12px; font-size: 13px; color: var(--cyan); min-height: 20px;"></div>
+      </div>
+    </div>
+    <div class="hero-features">
+      <div class="feature-card">
+        <span class="feature-icon">🤖</span>
+        <h3>Tư vấn AI 24/7</h3>
+        <p>Hiểu ngôn ngữ tự nhiên, tư vấn như người thật dựa trên 200K+ đơn hàng thực tế.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🎯</span>
+        <h3>Cá nhân hóa 100%</h3>
+        <p>Phân tích sở thích, lịch sử mua sắm để gợi ý đúng sản phẩm bạn cần.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">⚡</span>
+        <h3>Siêu nhanh</h3>
+        <p>Trả lời trong 2 giây, cập nhật real-time tồn kho và khuyến mãi.</p>
+      </div>
+    </div>
+  </div>
+</section>

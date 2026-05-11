@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStore AI Advisor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Symbols+2&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="/static/css/advisor-ui.css">
+</head>
+<body>
+  <div class="advisor-shell">
+    <header class="advisor-topbar">
+      <div class="brand-block">
+        <div class="brand-logo">T</div>
+        <div>
+          <div class="brand-name">TechStore AI</div>
+          <div class="brand-desc">Gợi ý nhanh • Tư vấn đúng nhu cầu</div>
+        </div>
+      </div>
+
+      <div class="advisor-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="top-search" type="text" placeholder="Tìm nhanh: laptop, điện thoại, phụ kiện...">
+      </div>
+    </header>
+
+    <main class="advisor-main">
+      <section class="welcome-card">
+        <div>
+          <div class="eyebrow">Chọn danh mục để xem gợi ý nhanh</div>
+          <h1>Xin chào, hôm nay bạn đang cần gì?</h1>
+          <p>Nhấn vào các nút bên dưới để xem gợi ý theo danh mục. Nút chat luôn nổi ở góc phải dưới để bạn mở tư vấn bất cứ lúc nào.</p>
+        </div>
+        <div class="welcome-stats">
+          <div class="mini-stat"><span>Sản phẩm</span><strong id="ov-products">--</strong></div>
+          <div class="mini-stat"><span>Người dùng</span><strong id="ov-users">--</strong></div>
+          <div class="mini-stat"><span>Đơn hàng</span><strong id="ov-orders">--</strong></div>
+          <div class="mini-stat"><span>Đánh giá</span><strong id="ov-reviews">--</strong></div>
+        </div>
+      </section>
+
+      <section class="category-strip">
+        <button class="category-btn active" data-category="Điện thoại"><i class="fa-solid fa-mobile-screen-button"></i><span>Điện thoại</span></button>
+        <button class="category-btn" data-category="Laptop"><i class="fa-solid fa-laptop"></i><span>Máy tính</span></button>
+        <button class="category-btn" data-category="Phụ kiện"><i class="fa-solid fa-headphones"></i><span>Phụ kiện</span></button>
+        <button class="category-btn" data-category="Đồng hồ thông minh"><i class="fa-solid fa-watch-smart"></i><span>Đồng hồ</span></button>
+        <button class="category-btn" data-category="Máy tính bảng"><i class="fa-solid fa-tablet-screen-button"></i><span>Máy tính bảng</span></button>
+        <button class="category-btn" data-category="Máy ảnh"><i class="fa-solid fa-camera"></i><span>Máy ảnh</span></button>
+      </section>
+
+      <section class="suggestion-layout">
+        <div class="suggestion-panel">
+          <div class="panel-head">
+            <div>
+              <h2>Gợi ý nhanh</h2>
+              <p>Danh sách sản phẩm sẽ hiện ra khi bạn chọn danh mục.</p>
+            </div>
+            <button id="refresh-btn" class="ghost-btn"><i class="fa-solid fa-rotate"></i> Làm mới</button>
+          </div>
+          <div id="suggestion-list" class="suggestion-list">
+            <div class="empty-state">
+              <strong>Chưa có gợi ý</strong>
+              <span>Hãy bấm một nút danh mục ở trên để xem sản phẩm phù hợp.</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="insight-panel">
+          <div class="panel-head compact">
+            <div>
+              <h2>Thông tin hỗ trợ</h2>
+              <p>Chọn danh mục hoặc mở chat để tư vấn sâu hơn.</p>
+            </div>
+          </div>
+
+          <div class="insight-box">
+            <div class="insight-row"><span>Trạng thái AI</span><strong id="ov-ai-status">--</strong></div>
+            <div class="insight-row"><span>Nguồn dữ liệu</span><strong id="ov-source">--</strong></div>
+            <div class="insight-row"><span>Model</span><strong id="ov-models">--</strong></div>
+          </div>
+
+          <div class="insight-box">
+            <div class="insight-title">Mẹo chọn nhanh</div>
+            <ul class="tips-list">
+              <li>Chọn <b>Điện thoại</b> nếu bạn cần pin, camera, giá.</li>
+              <li>Chọn <b>Laptop</b> nếu cần học tập, làm việc, gaming.</li>
+              <li>Chọn <b>Phụ kiện</b> nếu cần tai nghe, sạc, chuột, bàn phím.</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <button id="chat-fab" class="chat-fab" title="Mở chat">
+    <i class="fa-solid fa-comments"></i>
+  </button>
+
+  <div id="chat-modal" class="chat-modal hidden">
+    <div class="chat-modal-card">
+      <div class="chat-modal-header">
+        <div>
+          <div class="eyebrow small">AI chat</div>
+          <h3>Tư vấn nhanh</h3>
+        </div>
+        <button id="close-chat-btn" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="chat-meta">
+        <span>Session: <strong id="active-session-label">--</strong></span>
+        <span>Model: <strong id="last-model-label">--</strong></span>
+      </div>
+
+      <div id="chat-thread" class="chat-thread">
+        <div class="chat-empty">
+          <strong>Hỏi mình bất cứ điều gì</strong>
+          <span>Ví dụ: “laptop học lập trình 15 triệu”</span>
+        </div>
+      </div>
+
+      <form id="chat-form" class="chat-composer">
+        <input type="text" id="chat-query" placeholder="Nhập câu hỏi...">
+        <button type="submit" class="primary-btn">Gửi</button>
+      </form>
+
+      <div class="chat-controls">
+        <button id="new-session-btn" class="ghost-btn">Phiên mới</button>
+        <button id="clear-history-btn" class="ghost-btn danger">Xóa lịch sử</button>
+      </div>
+      <input type="hidden" id="session-id-input">
+      <input type="hidden" id="user-id-input">
+    </div>
+  </div>
+
+  <script src="/static/js/advisor-ui.js"></script>
+</body>
+</html>

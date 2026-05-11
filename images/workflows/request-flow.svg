@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .bg{fill:#0b1220}
+      .panel{fill:#111a2e;stroke:#2a3a5f;stroke-width:2}
+      .title{fill:#e5eefc;font-family:Inter,Arial,sans-serif;font-size:34px;font-weight:700}
+      .text{fill:#d7e3f5;font-family:Inter,Arial,sans-serif;font-size:20px}
+      .small{fill:#9fb3d1;font-family:Inter,Arial,sans-serif;font-size:16px}
+      .box{fill:#17233d;stroke:#5b7bb7;stroke-width:2}
+      .box2{fill:#1a2b24;stroke:#56b37d;stroke-width:2}
+      .box3{fill:#2b1f34;stroke:#b16be3;stroke-width:2}
+      .arrow{stroke:#7fb3ff;stroke-width:5;fill:none;marker-end:url(#m)}
+      .arrow2{stroke:#74d69b;stroke-width:5;fill:none;marker-end:url(#m2)}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#7fb3ff"/>
+    </marker>
+    <marker id="m2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#74d69b"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1400" height="900"/>
+  <rect class="panel" x="50" y="40" rx="24" ry="24" width="1300" height="820"/>
+  <text class="title" x="90" y="105">TechStore AI - Workflow xí lý request</text>
+  <text class="small" x="90" y="145">LuÓng tÕng quát të ng°Ýi dùng ¿n API và bÙ gãi ý</text>
+
+  <rect class="box" x="90" y="220" rx="18" ry="18" width="220" height="110"/>
+  <text class="text" x="130" y="265">Ng°Ýi dùng</text>
+  <text class="small" x="130" y="297">Web / API client</text>
+
+  <rect class="box" x="390" y="220" rx="18" ry="18" width="240" height="110"/>
+  <text class="text" x="430" y="260">Flask App</text>
+  <text class="small" x="430" y="292">app.py + routes.py</text>
+
+  <rect class="box2" x="700" y="180" rx="18" ry="18" width="250" height="110"/>
+  <text class="text" x="740" y="220">ProductManager</text>
+  <text class="small" x="740" y="252">Dï liÇu JSON / nghiÇp vå</text>
+
+  <rect class="box3" x="700" y="340" rx="18" ry="18" width="250" height="110"/>
+  <text class="text" x="740" y="380">Vector / Recommender</text>
+  <text class="small" x="740" y="412">Semantic search, hybrid</text>
+
+  <rect class="box" x="1000" y="250" rx="18" ry="18" width="260" height="130"/>
+  <text class="text" x="1040" y="295">Response JSON</text>
+  <text class="small" x="1040" y="325">K¿t qu£ gãi ý / s£n ph©m</text>
+  <text class="small" x="1040" y="350">Trace + source + debug</text>
+
+  <path class="arrow" d="M310 275 L390 275"/>
+  <path class="arrow" d="M630 275 L700 235"/>
+  <path class="arrow2" d="M630 275 L700 395"/>
+  <path class="arrow" d="M950 235 L1000 300"/>
+  <path class="arrow2" d="M950 395 L1000 330"/>
+
+  <text class="small" x="90" y="560">Các endpoint chính</text>
+  <rect class="panel" x="90" y="590" rx="16" ry="16" width="1220" height="180"/>
+  <text class="text" x="120" y="640">/api/chat</text>
+  <text class="small" x="120" y="670">Xí lý hÙi tho¡i, trending, fallback LLM</text>
+  <text class="text" x="430" y="640">/api/recommend</text>
+  <text class="small" x="430" y="670">Hybrid, trending, popularity, tfidf, item_cf, svd, cluster</text>
+  <text class="text" x="790" y="640">/api/products</text>
+  <text class="small" x="790" y="670">Danh sách, tìm ki¿m, lÍc, semantic-search</text>
+</svg>
